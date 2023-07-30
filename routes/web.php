@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,9 +93,15 @@ Route::get('/about', function () {
 
 // contact route
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+Route::get('/contact', [ContactController::class,'index'])->name('contact');
+
+Route::post('/contact', [ContactController::class,'storeContact'])->name('contact');
+
+Route::get('/comments', [ContactController::class,'manageContact'])->name('manageContact');
+
+
+
+
 
 // services route
 

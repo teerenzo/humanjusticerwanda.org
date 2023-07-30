@@ -43,10 +43,19 @@
                             @if(auth()->user()->role == 'admin')
 
                             <li class="has_sub">
+
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Documents</span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="{{('/documents/add')}}">Add Document</a></li>
                                     <li><a href="{{route('documents')}}">Manage Documents</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Comments</span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="{{('/comments')}}">Comments</a></li>
+            
                                 </ul>
                             </li>
                             @endif
