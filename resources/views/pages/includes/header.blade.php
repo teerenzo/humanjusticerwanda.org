@@ -26,7 +26,7 @@
    </div>
   </section>
 
-  <section class="flex items-center justify-between mx-10">
+  <section class="flex items-center justify-around md:mx-10">
     <div class="flex items-center p-5 gap-2">
         <img src="../images/logo.png" alt="" srcset="">
         <div class="flex flex-col text-[#015AAB] text-2xl">
@@ -67,4 +67,45 @@
 
         </span>
 
+        <button id="mobile-icon" class="md:hidden">
+          <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+        </button>
+                  <!-- Mobile menu -->
+                  <div class="md:hidden flex justify-center mt-3 w-full absolute pointer-events-auto z-10">
+        <div id="mobile-menu" class="mobile-menu absolute top-23 w-full"> <!-- add hidden here later -->
+          <ul class="bg-gray-100 shadow-lg leading-9 font-bold h-screen  px-5">
+       
+          <li class="relative main-menu font-light {{Request::is('/') ? ' text-[#015AAB]' : ''}}"><a href="/">Home</a>
+    
+    </li>
+        <li class=" relative main-menu font-light {{Request::is('about') ? ' text-[#015AAB]' : ''}}"><a href="/about">About Us</a>
+
+      </li>
+        <li class="  font-light {{Request::is('our-services') ? ' text-[#015AAB]' : ''}}"><a href="/our-services">Services</a>
+
+      </li>
+        <li class=" relative main-menu font-light {{Request::is('contact') ? ' text-[#015AAB]' : ''}}"><a href="/contact">Contact Us</a>
+
+        </li>
+          </ul>
+          </div>
+      </div>
+
   </section>
+
+  <script>
+    const mobile_icon = document.getElementById('mobile-icon');
+const mobile_menu = document.getElementById('mobile-menu');
+const hamburger_icon = document.querySelector("#mobile-icon i");
+
+function openCloseMenu() {
+  mobile_menu.classList.toggle('block');
+  mobile_menu.classList.toggle('active');
+}
+
+function changeIcon(icon) {
+  icon.classList.toggle("fa-xmark");
+}
+
+mobile_icon.addEventListener('click', openCloseMenu);
+</script>
