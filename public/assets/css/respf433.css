@@ -1,0 +1,95 @@
+@media (max-width: 767px){
+    
+    header.header {
+        background: #000;
+    }
+    .header-logo__img {
+        max-height: 50px!important;
+    }
+    .promo--front_3 .promo-slider .align-container {
+        height: 296px;
+    }
+    .align-container__item {
+        padding-top: 65%!important;
+    }
+    .promo-slider .align-container {
+        padding: 0px 0 0px 0;
+    }
+    h2 {
+        font-size: 22px;
+        top: 64%!important;
+        left: 4.5%!important;
+    }
+    .promo-slider__title h2{
+        left: 3.5%!important;
+        top: 53%!important;
+        font-size: 33px!important;
+    }
+    .promo-slider__item--style-2 .promo-slider__title {
+        color: inherit;
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    .promo .slider__nav {
+        display: none;
+    }
+    .heading__title {
+        font-size: 19px!important;
+        line-height: 28px!important;
+    }
+    .promo-pannel__video {
+        position: relative;
+        min-height: 260px;
+        max-width: 100%;
+        display: flex;
+    }
+    .LearningLab{
+        right: -229px!important;
+        height: 400px!important;
+        width: 400px!important;
+        bottom: 8px!important;
+    }
+    .LearningLab a{
+        top: 153px!important;
+    }
+    .counter-item {
+        display:block;
+        text-align: inherit;
+        margin-bottom: 4%;
+        margin-top: 6%;
+        border-top: 1px solid;
+        padding: 4%;
+    }
+    .testimonials-height{
+        height: 573px!important;
+    }
+    .desktop-show{
+        display: none!important;
+    }
+    .mobile-show{
+        display: block!important;
+    }
+    .col-4 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 1200px){
+    .mobile-show{
+        display: none;
+    }
+}
+/*
+@media (max-width: 1200px){
+    .LearningLab{
+        position: absolute;
+        right: -422px;
+        height: 500px;
+        width: 500px;
+        background: #e80002;
+        border-radius: 50%;
+        z-index: -1; 
+        bottom: -10px;
+    }
+} */
