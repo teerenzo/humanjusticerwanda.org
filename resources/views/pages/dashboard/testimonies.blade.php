@@ -129,11 +129,14 @@
 
     
     <td>
+        @if(auth()->user()->role=='admin')
     
     @if($data->status=='inactive' || $data->status=='pending')
     <a href="{{route('activeTestimony',$data->id)}}" class="btn btn-success">Active</a>
     @else
     <a href="{{route('inactiveTestimony',$data->id)}}" class="btn btn-danger">Inactive</a>
+    @endif
+
     @endif
             
     
