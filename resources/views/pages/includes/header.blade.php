@@ -26,10 +26,10 @@
    </div>
   </section>
 
-  <section class="flex items-center justify-around md:mx-10">
+  <section class="flex items-center justify-around mx-0 md:mx-10">
     <div class="flex items-center p-5 gap-2">
-        <img src="../images/logo.png" alt="" srcset="">
-        <div class="flex flex-col text-[#015AAB] text-2xl">
+        <img src="../images/logo.png" alt="" class="w-20 md:w-auto" srcset="">
+        <div class="flex flex-col text-[#015AAB] md:text-2xl text-xl">
         <span>
         Human Justice 
         </span>
@@ -68,7 +68,7 @@
         </span>
 
         <button id="mobile-icon" class="md:hidden">
-          <i onclick="changeIcon(this)" class="fa-solid fa-bars"></i>
+          <i onclick="changeIcon(this)" class="fa-solid fa-bars text-[#015AAB] text-2xl"></i>
         </button>
                   <!-- Mobile menu -->
                   <div class="md:hidden flex justify-center mt-3 w-full absolute pointer-events-auto z-10">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -20,6 +21,11 @@ class LoginController extends Controller
             'password' => 'required|min:6|max:255',
         ]);
 
+        // check if is active
+        $user = User::where('email', $request->email)->first();
+        if($user->is_active == 0){
+            return redirect()->back()->with('status', 'Your account is not active. Please check your email to activate your account');
+        }
         $credentials = $request->only('email', 'password');
 
         if (auth()->attempt($credentials)) {

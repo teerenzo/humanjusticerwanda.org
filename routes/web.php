@@ -36,6 +36,8 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 Route::get('/register', [SignUpController::class, 'index'])->name('register');
 Route::post('/register', [SignUpController::class, 'register']);
+// verify email
+Route::get('/verify-email/{token}', [SignUpController::class, 'verifyEmail'])->name('verifyEmail');
 
 //dashboard route
 

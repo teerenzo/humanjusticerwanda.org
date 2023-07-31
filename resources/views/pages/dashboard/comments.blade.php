@@ -133,6 +133,9 @@
   
     @if(auth()->user()->role == 'admin')
 
+    <a href="mailto:{{$data->email}}">
+        &nbsp;<i class="fa fa-reply" style="color: blue"></i></a> 
+
         &nbsp;<a href="{{route('rejectService',$data->id)}}" onclick="return confirm('Do you reaaly want to reject this case?')"> <i class="fa fa-times" style="color: #f05050"></i></a> 
         @endif
         </div>

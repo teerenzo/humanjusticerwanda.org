@@ -18,7 +18,7 @@
 
         <!-- Select2 -->
         <link href="{{asset('plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <!-- Jquery filer css -->
         <link href="{{asset('plugins/jquery.filer/css/jquery.filer.css')}}" rel="stylesheet" />
         <link href="{{asset('plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css')}}" rel="stylesheet" />
@@ -98,7 +98,12 @@ function getSubCat(val) {
                             <div class="col-sm-12">
                                 <div class="card-box">
                          
-
+                                <div class="row">
+    <div class="col-sm-6 m-10">
+        <input type="text" id="searchInput" class="form-control" placeholder="type to search">
+    </div>
+</div>
+<br>
                                     <div class="table-responsive">
 <table class="table table-colored table-centered table-inverse m-0">
 <thead>
@@ -109,7 +114,6 @@ function getSubCat(val) {
 <th>Owner Id </th>
 <th>Description</th>
 <th>Document</th>
-
 <th>Action</th>
 </tr>
 </thead>
@@ -203,12 +207,26 @@ function getSubCat(val) {
 
         <!-- page specific js -->
         <script src="{{asset('assets/admin/pages/jquery.blog-add.init.js')}}"></script>
-
         <!-- App js -->
         <script src="{{asset('assets/admin/js/jquery.core.js')}}"></script>
         <script src="{{asset('assets/admin/js/jquery.app.js')}}"></script>
 
         <script>
+
+             // Function to filter the table rows based on search input
+    function filterTableRows() {
+        var searchText = $('#searchInput').val().toLowerCase();
+
+        $('tbody tr').each(function () {
+            var rowText = $(this).text().toLowerCase();
+            var showRow = rowText.includes(searchText);
+            $(this).toggle(showRow);
+        });
+    }
+
+    // Listen for changes in the search input
+    $('#searchInput').on('keyup', filterTableRows);
+
 
             jQuery(document).ready(function(){
 

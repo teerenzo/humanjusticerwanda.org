@@ -105,8 +105,9 @@ function getSubCat(val) {
 
     @csrf
 
+    <div class="col-md-12 ">
 
-    <div class="form-group m-b-20">
+    <div class="form-group  col-md-4">
 <label for="exampleInputEmail1">Names</label>
 <input type="text" class="form-control" id="posttitle" name="name" placeholder="Enter Names" required>
 
@@ -119,7 +120,7 @@ function getSubCat(val) {
                                             </div>
 </div>
 
-<div class="form-group m-b-20">
+<div class="form-group col-md-4  m-b-20">
 <label for="exampleInputEmail1">Id Number</label>
 <input type="text" class="form-control" id="posttitle" name="id" placeholder="Enter Id Number" required>
 
@@ -133,8 +134,7 @@ function getSubCat(val) {
                                             </div>
 </div>
 
-
-<div class="form-group m-b-20">
+<div class="form-group col-md-4  m-b-20">
 <label for="exampleInputEmail1">Tel</label>
 <input type="text" class="form-control" id="posttitle" name="tel" placeholder="Enter Tel" required>
 
@@ -146,6 +146,9 @@ function getSubCat(val) {
                                                 </b></p>
                                             </div>
 </div>
+
+</div>
+
 
 
 <div class="row">
