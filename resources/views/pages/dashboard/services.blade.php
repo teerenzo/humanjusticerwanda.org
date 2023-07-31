@@ -215,7 +215,7 @@
     <form id="inputReason">
         <label for="reason">Why are you rejecting this?</label> <br>
          <input type="text" name="reason" oninput='getReason(this)' id="reason" placeholder="enter reason"  class="form-data">
-         <input type="text" name="id" value id="id" placeholder="enter reason"  class="form-data">
+         <input type="hidden" name="id" value id="id" placeholder="enter reason"  class="form-data">
     </form>
       </div>
       <div class="modal-footer">
