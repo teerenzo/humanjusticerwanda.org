@@ -47,7 +47,7 @@
     </div>
     <div class="flex gap-10 justify-center flex-wrap p-5">
 
-    <div class=" bg-service1 w-1/4 text-white flex-wrap" style="">
+    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
     <div class=" z-50 p-5 flex flex-col  gap-5 ">
       <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -65,7 +65,7 @@
     
     </div>
 
-    <div class=" bg-service1 w-1/4 text-white flex-wrap" style="">
+    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -83,7 +83,7 @@
 
 </div>
 
-<div class=" bg-service1 w-1/4 text-white flex-wrap" style="">
+<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -101,7 +101,7 @@
 
 </div>
 
-    <div class=" bg-service1 w-1/4 text-white flex-wrap" style="">
+    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -119,7 +119,7 @@
 
 </div>
 
-<div class=" bg-service1 w-1/4 text-white flex-wrap" style="">
+<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
