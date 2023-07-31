@@ -42,16 +42,16 @@
     <nav class="text-black  md:flex hidden">
           <ul class="flex uppercase font-bold">
        
-            <li class="p-5 relative main-menu font-light {{Request::is('/') ? ' text-[#015AAB]' : ''}}"><a href="/">Home</a>
+            <li class="p-5 relative hover:text-[#015AAB] main-menu font-light {{Request::is('/') ? ' text-[#015AAB]' : ''}}"><a href="/">Home</a>
     
         </li>
-            <li class=" p-5 relative main-menu font-light {{Request::is('about') ? ' text-[#015AAB]' : ''}}"><a href="/about">About Us</a>
+            <li class=" p-5 relative hover:text-[#015AAB] main-menu font-light {{Request::is('about') ? ' text-[#015AAB]' : ''}}"><a href="/about">About Us</a>
 
           </li>
-            <li class=" p-5 font-light {{Request::is('our-services') ? ' text-[#015AAB]' : ''}}"><a href="/our-services">Services</a>
+            <li class=" p-5 font-light hover:text-[#015AAB] {{Request::is('our-services') ? ' text-[#015AAB]' : ''}}"><a href="/our-services">Services</a>
 
           </li>
-            <li class="p-5 relative main-menu font-light {{Request::is('contact') ? ' text-[#015AAB]' : ''}}"><a href="/contact">Contact Us</a>
+            <li class="p-5 relative hover:text-[#015AAB] main-menu font-light {{Request::is('contact') ? ' text-[#015AAB]' : ''}}"><a href="/contact">Contact Us</a>
  
             </li>
 
@@ -78,13 +78,13 @@
           <li class="relative main-menu font-light {{Request::is('/') ? ' text-[#015AAB]' : ''}}"><a href="/">Home</a>
     
     </li>
-        <li class=" relative main-menu font-light {{Request::is('about') ? ' text-[#015AAB]' : ''}}"><a href="/about">About Us</a>
+        <li class=" relative main-menu hover:text-[#015AAB] font-light {{Request::is('about') ? ' text-[#015AAB]' : ''}}"><a href="/about">About Us</a>
 
       </li>
-        <li class="  font-light {{Request::is('our-services') ? ' text-[#015AAB]' : ''}}"><a href="/our-services">Services</a>
+        <li class="  font-light hover:text-[#015AAB] {{Request::is('our-services') ? ' text-[#015AAB]' : ''}}"><a href="/our-services">Services</a>
 
       </li>
-        <li class=" relative main-menu font-light {{Request::is('contact') ? ' text-[#015AAB]' : ''}}"><a href="/contact">Contact Us</a>
+        <li class=" relative main-menu hover:text-[#015AAB] font-light {{Request::is('contact') ? ' text-[#015AAB]' : ''}}"><a href="/contact">Contact Us</a>
 
         </li>
           </ul>

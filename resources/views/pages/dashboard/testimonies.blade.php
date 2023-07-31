@@ -33,7 +33,7 @@
 <link href="assets/admin/css/pages.css" rel="stylesheet" type="text/css" />
 <link href="assets/admin/css/menu.css" rel="stylesheet" type="text/css" />
 <link href="assets/admin/css/responsive.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="../ZZz{{asset('plugins/switchery/switchery.min.css">
+<link rel="stylesheet" href="../ZZz{{asset('plugins/switchery/switchery.min.css')}}">
 <script src="assets/admin/js/modernizr.min.js"></script>
 
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -112,40 +112,36 @@
 </thead>
 <tbody>
 
-<?php
-// if($_SESSION['id']!='1'){
-//     $owner=$_SESSION['id'];
-//     $query=mysqli_query($con,"select tblposts.id as postid,tblposts.PostTitle as title,tblcategory.CategoryName as category,tblsubcategory.Subcategory as subcategory from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join tblsubcategory on tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.owner='$owner' ");
-// }else{
-//     $query=mysqli_query($con,"select tblposts.id as postid,tblposts.PostTitle as title,tblcategory.CategoryName as category,tblsubcategory.Subcategory as subcategory from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join tblsubcategory on tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 ");
-// }
 
-// $rowcount=mysqli_num_rows($query);
-// if($rowcount==0)
-// {
-?>
-{{-- <tr>
 
-<td colspan="4" align="center"><h3 style="color:red">No record found</h3></td>
-<tr> --}}
-<?php 
-// } else {
-// while($row=mysqli_fetch_array($query))
-// {
-?>
  @foreach($testimonies as $data)
  <tr>
     <td>
         <img src="{{ url('images/'.$data->image) }}"
       style="height: 100px; width: 150px;">
       </td> 
-    <td>{{$data->testimony}}</td>
+    <td>
+    <?php
+        echo  (substr($data->testimony,0));
+        ?>    
+
+     
 
     
-    <td><a href="edit-post.php?pid={{$data->id}}"><i class="fa fa-pencil" style="color: #29b6f6;"></i></a> 
-        &nbsp;<a href="manage-posts.php?pid={{$data->id}}&&action=del" onclick="return confirm('Do you reaaly want to delete ?')"> <i class="fa fa-trash-o" style="color: #f05050"></i></a> </td>
+    <td>
+    
+    @if($data->status=='inactive' || $data->status=='pending')
+    <a href="{{route('activeTestimony',$data->id)}}" class="btn btn-success">Active</a>
+    @else
+    <a href="{{route('inactiveTestimony',$data->id)}}" class="btn btn-danger">Inactive</a>
+    @endif
+            
+    
+    <a href="{{route('editTestimony',$data->id)}}"><i class="fa fa-pencil" style="color: #29b6f6;"></i></a> 
+        &nbsp;<a href="{{route('deleteTestimony',$data->id)}}" onclick="return confirm('Do you reaaly want to delete ?')"> <i class="fa fa-trash-o" style="color: #f05050"></i></a> </td>
+
  
-   
+        
  </tr>
  @endforeach
  <tr>

@@ -11,7 +11,7 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="admin/images/favicon.ico">
         <!-- App title -->
-        <title>HRO | add </title>
+        <title>HJO | add </title>
 
         <!-- Summernote css -->
         <link href="{{asset('plugins/summernote/summernote.css')}}" rel="stylesheet" />

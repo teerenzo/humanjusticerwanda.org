@@ -18,7 +18,7 @@
 
         <!-- Select2 -->
         <link href="{{asset('plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
         <!-- Jquery filer css -->
         <link href="{{asset('plugins/jquery.filer/css/jquery.filer.css')}}" rel="stylesheet" />
         <link href="{{asset('plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css')}}" rel="stylesheet" />
@@ -53,12 +53,12 @@ function getSubCat(val) {
         <!-- Begin page -->
         <div id="wrapper">
 
-          
             <!-- Top Bar Start -->
-            @include('pages/dashboard/includes/header')
+          @include('pages/dashboard/includes/header')
             <!-- ========== Left Sidebar Start ========== -->
             @include('pages/dashboard/includes/leftSideBar')
-            <!-- Left Sidebar End -
+            <!-- Left Sidebar End -->
+
 
 
             <!-- ============================================================== -->
@@ -73,17 +73,17 @@ function getSubCat(val) {
                         <div class="row">
 							<div class="col-xs-12">
 								<div class="page-title-box">
-                                    <h4 class="page-title">Manage Documents </h4>
+                                    <h4 class="page-title">Add News </h4>
                                     <ol class="breadcrumb p-0 m-0">
                                         <li>
-                                            <a href="#">Admin</a>
+                                            <a href="#">Dashboard</a>
                                         </li>
                                         <li>
-                                            <a href="#">Posts</a>
+                                            <a href="#">Add News </a>
                                         </li>
-                                        <li class="active">
-                                            Manage Documents  
-                                        </li>
+                                        <!-- <li class="active">
+                                            Add Article
+                                        </li> -->
                                     </ol>
                                     <div class="clearfix"></div>
                                 </div>
@@ -91,77 +91,111 @@ function getSubCat(val) {
 						</div>
                         <!-- end row -->
 
+<div class="row">
+<div class="col-sm-6">  
+<!---Success Message--->  
+<?php //if($msg){ ?>
+{{-- <div class="alert alert-success" role="alert">
+<strong>Well done!</strong> <?php echo htmlentities($msg);?>
+</div> --}}
+<?php //} ?>
 
+<!---Error Message--->
+<?php //if($error){ ?>
+{{-- <div class="alert alert-danger" role="alert">
+<strong>Oh snap!</strong> <?php echo htmlentities($error);?></div> --}}
+<?php //} ?>
+
+
+</div>
+</div>
 
 
                         <div class="row">
-                            <div class="col-sm-12">
-                                <div class="card-box">
-                         
-                                <div class="row">
-    <div class="col-sm-6 m-10">
-        <input type="text" id="searchInput" class="form-control" placeholder="type to search">
-    </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="p-6">
+                                    <div class="">
+<form name="{{route('addTestimony')}}" method="post" enctype="multipart/form-data">
+@if (session('status'))
+                                            {{session('status')}}
+                                        @endif
+
+    @csrf
+    <div class="col-xs-12">
+                                                <p><b style="color: red">
+                                                @error('user_id')
+                                                   you have already posted a testimony
+                                                @enderror
+                                                </b></p>
+                                            </div>
+ <div class="form-group m-b-20">
+<label for="exampleInputEmail1">Name</label>
+<input type="text" class="form-control" value="{{$testimony->name}}" id="posttitle" name="name" placeholder="Enter title" required>
+<input type="hidden" class="form-control" value="{{auth()->user()->id}}" id="posttitle" name="user_id"  required>
+<div class="col-xs-12">
+                                                <p><b style="color: red">
+                                                @error('name')
+                                                    {{$message}}
+                                                @enderror
+                                                </b></p>
+                                            </div>
 </div>
-<br>
-                                    <div class="table-responsive">
-<table class="table table-colored table-centered table-inverse m-0">
-<thead>
-<tr>
-                                           
-<th>Owner</th>
-<th>Owner Phone </th>
-<th>Owner Id </th>
-<th>Description</th>
-<th>Document</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-
- @foreach($documents as $data)
- <tr>
- <td>{{$data->owner}}</td>
-    <td>
-
-    {{$data->owner_phone}}
-
-      </td> 
-
-      <td>
-
-{{$data->owner_id}}
-
-  </td> 
 
 
-    <td>   <?php
-        echo  (substr($data->document_description,0));
-        ?>
-</td>
-    <td>
-
-    <a href="../documents/{{$data->document_name}}" target="_blank" rel="noopener noreferrer">  
-    {{$data->document_name}}</a>  </td>
 
     
-    <td><a href="{{route('downloadDocument',$data->document_name)}}" ><i class="fa fa-download" style="color: #29b6f6;"></i></a> 
-        &nbsp;<a href="{{route('deleteDocument',$data->id)}}" onclick="return confirm('Do you reaaly want to delete this document?')"> <i class="fa fa-times" style="color: #f05050"></i></a> </td>
- 
-   
- </tr>
- @endforeach
- <tr>
 
- </tr>
 
-                                               
-                                            </tbody>
-                                        </table>
+<div class="row">
+<div class="col-sm-12">
+ <div class="card-box">
+<h4 class="m-b-30 m-t-0 header-title"><b>Testimony</b></h4>
+<textarea class="w-48 summernote"  id="summernote" name="testimony" required>
+{{$testimony->testimony}}
+</textarea>
+</div>
+<div class="col-xs-12">
+                                                <p><b style="color: red">
+                                                @error('testimony')
+                                                    {{$message}}
+                                                @enderror
+                                                </b></p>
+                                            </div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-12">
+<img src="{{ url('images/'.$testimony->image) }}"
+      style="height: 100px; width: 150px;">
+      <a class="btn btn-primary">
+        Change Image
+</a>
+ <div class="card-box  hidden ">
+
+<h4 class="m-b-30 m-t-0 header-title"><b>Image</b></h4>
+<input type="file" class="form-control" id="postimage" name="image"  required>
+</div>
+<div class="col-xs-12">
+                                                <p><b style="color: red">
+                                                @error('image')
+                                                    {{$message}}
+                                                @enderror
+                                                </b></p>
+                                            </div>
+</div>
+</div>
+
+
+<button type="submit" name="submit" class="btn btn-success waves-effect waves-light">Save and Post</button>
+ <button type="button" class="btn btn-danger waves-effect waves-light">Discard</button>
+                                        </form>
                                     </div>
-                                </div>
-                            </div>
+                                </div> <!-- end p-20 -->
+                            </div> <!-- end col -->
                         </div>
+                        <!-- end row -->
 
 
 
@@ -169,26 +203,27 @@ function getSubCat(val) {
 
                 </div> <!-- content -->
 
-       @include('pages/dashboard/includes/footer')
+           @include('pages/dashboard/includes/footer')
 
             </div>
 
 
             <!-- ============================================================== -->
             <!-- End Right content here -->
-            <!-- ============================================================== -->
+            <!-- =============a================================================= -->
 
 
         </div>
         <!-- END wrapper -->
 
-    
+
+
         <script>
             var resizefunc = [];
         </script>
 
-        <!-- jQuery  -->
-        <script src="{{asset('assets/admin/js/jquery.min.js')}}"></script>
+     <!-- jQuery  -->
+     <script src="{{asset('assets/admin/js/jquery.min.js')}}"></script>
         <script src="{{asset('assets/admin/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('assets/admin/js/detect.js')}}"></script>
         <script src="{{asset('assets/admin/js/fastclick.js')}}"></script>
@@ -207,26 +242,12 @@ function getSubCat(val) {
 
         <!-- page specific js -->
         <script src="{{asset('assets/admin/pages/jquery.blog-add.init.js')}}"></script>
+
         <!-- App js -->
         <script src="{{asset('assets/admin/js/jquery.core.js')}}"></script>
         <script src="{{asset('assets/admin/js/jquery.app.js')}}"></script>
 
         <script>
-
-             // Function to filter the table rows based on search input
-    function filterTableRows() {
-        var searchText = $('#searchInput').val().toLowerCase();
-
-        $('tbody tr').each(function () {
-            var rowText = $(this).text().toLowerCase();
-            var showRow = rowText.includes(searchText);
-            $(this).toggle(showRow);
-        });
-    }
-
-    // Listen for changes in the search input
-    $('#searchInput').on('keyup', filterTableRows);
-
 
             jQuery(document).ready(function(){
 
@@ -249,8 +270,6 @@ function getSubCat(val) {
         <!--Summernote js-->
         <script src="{{asset('plugins/summernote/summernote.min.js')}}"></script>
 
-    
-
-
     </body>
 </html>
+<?php //} ?>

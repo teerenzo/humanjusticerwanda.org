@@ -33,9 +33,12 @@
     <p class="text-white text-2xl font-bold">We are here to listen to you and help you.</p>
 
     <div class="flex gap-10">
-    <button class="bg-[#015AAB] text-white px-5 py-3  mt-5">What Help?</button>
+   <a href="/login"> <button class="bg-[#015AAB] text-white px-5 py-3  mt-5">What Help?</button>
+   
+</a>
 
-    <button class="border border-2 border-[#015AAB] text-white px-5 py-3  mt-5">Free Consultation</button>
+<a href="/login">    <button class="border border-2 border-[#015AAB] text-white px-5 py-3  mt-5">Free Consultation</button>
+</a>
 
 
     </div>
@@ -235,9 +238,12 @@
       </div>
     </div>
 
+
+
     <div class="-mx-6 mt-8 lg:col-span-2 lg:mx-0">
       <div class="swiper-container !overflow-hidden">
         <div class="swiper-wrapper">
+        @foreach($testimonies as $data)
           <div class="swiper-slide">
             <blockquote
               class="flex h-full flex-col justify-between bg-white p-12"
@@ -253,42 +259,21 @@
                 
 
                   <p class="mt-4 text-lg text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam cumque recusandae dolorum porro, quasi sunt
-                    necessitatibus dolorem ab laudantium vel.
-                  </p>
-                </div>
-              </div>
-
-              <footer class="mt-8 text-gray-500">- Emmanuel</footer>
-            </blockquote>
-          </div>
-
-          <div class="swiper-slide">
-            <blockquote
-              class="flex h-full flex-col justify-between bg-white p-12"
-            >
-              <div>
-                <div class="flex gap-0.5 text-white">
-                 
               
-             
-                </div>
-
-                <div class="mt-4">
-                 
-
-                  <p class="mt-4 text-lg text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam cumque recusandae dolorum porro, quasi sunt
-                    necessitatibus dolorem ab laudantium vel.
+                  <?php
+        echo  (substr($data->testimony,0));
+        ?> 
                   </p>
                 </div>
               </div>
 
-              <footer class="mt-8 text-gray-500">- Emmanuel</footer>
+              <footer class="mt-8 text-gray-500">-   {{$data->name}}</footer>
             </blockquote>
           </div>
+
+          @endforeach
+
+        
 
 
       

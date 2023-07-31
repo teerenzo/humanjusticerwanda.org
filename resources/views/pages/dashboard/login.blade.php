@@ -43,7 +43,7 @@
 
 
         <!-- App title -->
-        <title>HRO |  Panel</title>
+        <title>HJO |  Panel</title>
 
         <!-- App css -->
             <!-- App css -->

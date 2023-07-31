@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,7 +11,7 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
         <!-- App title -->
-        <title>HRO</title>
+        <title>HJO</title>
 
         <!--Morris Chart CSS -->
 		<link rel="stylesheet" href="../plugins/morris/morris.css">
@@ -149,8 +150,14 @@
             
   
     @if(auth()->user()->role == 'admin')
-  <a href="{{route('acceptService',$data->id)}}" onclick="return confirm('Do you reaaly want to accept this case ?')"><i class="fa fa-check" style="color: #29b6f6;"></i></a> 
-        &nbsp;<a href="{{route('rejectService',$data->id)}}" onclick="return confirm('Do you reaaly want to reject this case?')"> <i class="fa fa-times" style="color: #f05050"></i></a> 
+<i class="fa fa-check" 
+   data-toggle="modal" data-target="#exampleModalCenter"
+   onclick="getId({{$data->id}},'accept')"
+   style="color: #29b6f6;"></i>
+        &nbsp;  <i
+        data-toggle="modal" data-target="#exampleModalCenter"
+   onclick="getId({{$data->id}},'reject')"
+        class="fa fa-times" style="color: #f05050"></i>
         @endif
         </div>
     
@@ -193,7 +200,31 @@
 
         </div>
         <!-- END wrapper -->
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <p id="message"> Are you sure You want to delete this?</p> 
+    <form id="inputReason">
+        <label for="reason">Why are you rejecting this?</label> <br>
+         <input type="text" name="reason" oninput='getReason(this)' id="reason" placeholder="enter reason"  class="form-data">
+         <input type="text" name="id" value id="id" placeholder="enter reason"  class="form-data">
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <a id="deleteBtn" class="btn btn-primary" href="{{route('rejectService',$data->id)}}"> Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
         <script>
             var resizefunc = [];
         </script>
@@ -225,6 +256,42 @@
 
         <script>
 
+            const deleteBtnRef=document.getElementById("deleteBtn");
+            const message=document.getElementById("message");
+            const inputReason=document.getElementById("inputReason");
+            const idRef=document.getElementById("id");
+            const reason=document.getElementById("reason");
+            let res="";
+           const getReason=()=>{
+            const data=[idRef.value,res]
+            //   console.log(e.target.value)
+              console.log(reason.value)
+              res=reason.value
+              deleteBtnRef.href="services/reject/"+`${data}` 
+            }
+
+
+            
+
+
+            const getId=(id,todo)=>{
+                const data=[id,res]
+                if(todo=='accept'){
+                 message.innerHTML="Accept this Service"
+                 deleteBtnRef.href="services/accept/"+`${id}`
+                 deleteBtnRef.innerHTML="Accept"
+                 inputReason.style.display='none'
+
+                }else{
+                message.innerHTML="Are you sure you want to reject this Service?"
+                 deleteBtnRef.href="services/reject/"+`${data}` 
+                 deleteBtnRef.innerHTML="Reject"
+                 inputReason.style.display='block'
+                 idRef.value=id;
+
+                }
+            }
+     
             jQuery(document).ready(function(){
 
                 $('.summernote').summernote({

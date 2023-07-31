@@ -8,6 +8,7 @@ use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,7 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-})->name('landing');
+Route::get('/', [LandingController::class,'index'])->name('landing');
 
 //login route
 
@@ -60,6 +59,11 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/testimonies',[TestimonyController::class, 'index'])->name('testimonies');
 Route::get('/addTestimony',[TestimonyController::class, 'addTestimony'])->name('addTestimony');
 Route::post('/addTestimony',[TestimonyController::class, 'storeTestimony'])->name('addTestimony');
+Route::get('/editTestimony/{id}',[TestimonyController::class, 'editTestimony'])->name('editTestimony');
+Route::post('/editTestimony/{id}',[TestimonyController::class, 'updateTestimony'])->name('editTestimony');
+Route::get('/deleteTestimony/{id}',[TestimonyController::class, 'deleteTestimony'])->name('deleteTestimony');
+Route::get('/activeTestimony/{id}',[TestimonyController::class, 'active'])->name('activeTestimony');
+Route::get('/inActiveTestimony/{id}',[TestimonyController::class, 'inactive'])->name('inactiveTestimony');
 
 
 //services route
