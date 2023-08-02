@@ -12,7 +12,7 @@
       background-size: cover;
     }
     .bg-service1{
-      background-image: url('../images/service1.png');
+      background-image: url('../images/bg10.png');
     }
   </style>
 </head>

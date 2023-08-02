@@ -14,7 +14,7 @@
 
     }
     .bg-service1{
-      background-image: url('../images/bg10.PNG');
+      background-image: url('../images/bg10.png');
     }
     .bg-service2{
       background-image: url('../images/service1.png');
