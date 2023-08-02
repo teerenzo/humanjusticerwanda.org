@@ -7,7 +7,7 @@
 
   <style>
     .bg-land{
-      background-image: url('../images/back.png');
+      background-image: url('../images/bg11.png');
       background-repeat: no-repeat;
       background-size: cover;
       height: 80vh;
@@ -72,7 +72,7 @@
         years experience
         </span>
       </div>
-      <img src="../images/back1.png" alt="" srcset="">
+      <img src="../images/bg10.png" alt="" srcset="">
     </div>
 
   </section>
