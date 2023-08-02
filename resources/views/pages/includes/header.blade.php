@@ -1,4 +1,4 @@
-<section class="flex justify-between px-5 py-5 bg-[#DDDDEC] px-10">
+<section class="flex justify-between  py-5 bg-[#DDDDEC] px-10">
    <div class="flex justify-between">
     <img src="../images/outgoing.svg" alt="" srcset="">
     <span>
@@ -6,9 +6,9 @@
     </span>
    </div>
 
-   <div class="flex justify-between">
+   <div class="flex justify-start ">
 
-    <img src="../images/account.png" alt="" srcset="">
+    <img src="../images/account.png" alt=""  srcset="">
     <span>
      @auth
 
@@ -59,13 +59,14 @@
           </ul>
         </nav>
        
-        <span class="p-2 bg-[#015AAB] flex gap-2 text-white  md:flex hidden">
+        <a href="/login">  <span class="p-2 bg-[#015AAB] flex gap-2 text-white  md:flex hidden">
             <img src="../images/business.svg" alt="" srcset="">
             <span>
             Get an Appointment
             </span>
 
         </span>
+        </a>
 
         <button id="mobile-icon" class="md:hidden">
           <i onclick="changeIcon(this)" class="fa-solid fa-bars text-[#015AAB] text-2xl"></i>

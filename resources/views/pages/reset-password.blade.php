@@ -24,19 +24,13 @@
 
       <!-- Right column container with form -->
       <div class="md:w-8/12 lg:ml-6 lg:w-5/12">
-        <form action="{{ route('login') }}" method="post">
+        <form action="{{ route('forgotPassword') }}" method="post">
         <h3 class="text-red-800">
         @if (session('status'))
                          {{session('status')}}
                                         @endif
                                  </h3>
                                         @csrf
-
-                                        <h3 class="text-red-800"> 
-                                                        @error('email')
-                                                    {{$message}}
-                                                @enderror
-                                                </h3>
           <!-- Email input -->
           <div class="relative mb-6" data-te-input-wrapper-init>
             <input
@@ -47,42 +41,17 @@
               placeholder="Email address" />
           </div>
 
-          <h3 class="text-red-800"> 
-                                                        @error('passowrd')
-                                                    {{$message}}
-                                                @enderror
-                                                </h3>
-          <!-- Password input -->
-          <div class="relative mb-6" data-te-input-wrapper-init>
-            <input
-            name="password"
-              type="password"
-              class="peer block min-h-[auto] border border-[#015AAB] border-1 w-full rounded  bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
-              id="exampleFormControlInput33"
-              placeholder="Password" />
-          </div>
-
-          <!-- Remember me checkbox -->
-          <div class="mb-6 flex items-center justify-between">
-
-
          
-            <a
-              href="/forgot-password"
-              class="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
-              >Forgot password?</a
-            >
-          </div>
+
 
           <!-- Submit button -->
-
-          <input 
+          <button
             type="submit"
             class="inline-block w-full rounded bg-[#015AAB] px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
             data-te-ripple-init
-            data-te-ripple-color="light"
-          Value= "Sign in"
-          />
+            data-te-ripple-color="light">
+            Reset Password
+          </button>
 
           <!-- Divider -->
           <div

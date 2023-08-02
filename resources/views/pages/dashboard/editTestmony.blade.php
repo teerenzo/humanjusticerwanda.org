@@ -73,14 +73,12 @@ function getSubCat(val) {
                         <div class="row">
 							<div class="col-xs-12">
 								<div class="page-title-box">
-                                    <h4 class="page-title">Add News </h4>
+                                    <h4 class="page-title">Add Testimony </h4>
                                     <ol class="breadcrumb p-0 m-0">
                                         <li>
                                             <a href="#">Dashboard</a>
                                         </li>
-                                        <li>
-                                            <a href="#">Add News </a>
-                                        </li>
+                                      
                                         <!-- <li class="active">
                                             Add Article
                                         </li> -->
@@ -93,29 +91,23 @@ function getSubCat(val) {
 
 <div class="row">
 <div class="col-sm-6">  
-<!---Success Message--->  
-<?php //if($msg){ ?>
-{{-- <div class="alert alert-success" role="alert">
-<strong>Well done!</strong> <?php echo htmlentities($msg);?>
-</div> --}}
-<?php //} ?>
 
-<!---Error Message--->
-<?php //if($error){ ?>
-{{-- <div class="alert alert-danger" role="alert">
-<strong>Oh snap!</strong> <?php echo htmlentities($error);?></div> --}}
-<?php //} ?>
 
 
 </div>
 </div>
+<?php
+$url=url()->current();
 
+$id = substr($url, strrpos($url, '/') + 1);
+
+?>
 
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="p-6">
                                     <div class="">
-<form name="{{route('addTestimony')}}" method="post" enctype="multipart/form-data">
+<form name="" action="{{route('editTestimony',$id)}}" method="post" enctype="multipart/form-data">
 @if (session('status'))
                                             {{session('status')}}
                                         @endif

@@ -14,6 +14,12 @@
 
     }
     .bg-service1{
+      background-image: url('../images/bg10.PNG');
+    }
+    .bg-service2{
+      background-image: url('../images/service1.png');
+    }
+    .bg-service3{
       background-image: url('../images/service1.png');
     }
   </style>
@@ -59,7 +65,7 @@
     NON-GOVERNMENTAL ORGANIZATION.
     </span>
     <p>
-    Integer arcu convallis tortor odio ad adipiscing quam praesent tincidunt imperdiet vitae. Phasellus aliquet malesuada duis egestas dapibus habitant nam letius mollis. Senectus aptent neque dapibus ultrices iaculis enim.
+    HUMAN JUSTICE ORGANISATION (HJO) is non-governmental Organization created on 07<sup>TH</sup>/July 2020 AND ITS ROLE   IN SOCIETY IS THE LEGAL AID  through Mediation, Assisting  defiled children   and raped persons in different competent courts, Orienting  cases ,Counseling based on laws  and advocacy  for persons with disabilities .
     </p>
    </div>
 
@@ -78,7 +84,7 @@
   </section>
 
 
-  <section class="flex flex-col justify-center bg-[#E8E8E8] w-full py-10">
+  <section class="flex flex-col justify-center items-center bg-[#E8E8E8] w-full py-10">
     <div class="flex flex-col justify-center items-center w-full">
       <p class="text-xl p-2">
       What we offer.
@@ -95,11 +101,11 @@
       <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
 
       <p class="z-10">
-      Advocacy for persons with disabilities
+      MEDIATION
       </p>
 
       <p>
-      Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
+      We Mediate  people in society using different methods  of ADR (Alternative dispute Resolution ) 
       </p>
    
 
@@ -131,11 +137,11 @@
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
 
   <p class="z-10">
-  Advocacy for persons with disabilities
+  ASSISTING  DEFILED  AND RAPED PERSONS
   </p>
 
   <p>
-  Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
+  Human justice organization provides with the   assistance  for defiled children and raped persons  by suing and following their cases in the competent courts  
   </p>
 
 
@@ -143,42 +149,12 @@
 
 </div>
 
-    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
-<div class=" z-50 p-5 flex flex-col  gap-5 ">
-  <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
-
-  <p class="z-10">
-  Orienting cases
-  </p>
-
-  <p>
-  Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
-  </p>
-
-
-</div>
-
-</div>
-
-<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
-
-<div class=" z-50 p-5 flex flex-col  gap-5 ">
-  <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
-
-  <p class="z-10">
-  Counselling based on laws 
-  </p>
-
-  <p>
-  Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
-  </p>
-
-
-</div>
-
-</div>
     </div>
+
+    <a href="/our-services"> <button class="bg-[#015AAB] text-white px-5 py-3  mt-5">see more</button>
+   
+   </a>
   </section>
 
   <section>

@@ -77,20 +77,19 @@ class TestimonyController extends Controller
             $validatedData = $request->validate([
                 'name' => 'required|max:255',
                  'testimony' => 'required:max:200',
-                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                  'user_id' => 'required',
+                 
         
             ]);
     
-            $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('images'), $imageName);
+            // $imageName = time().'.'.$request->image->extension();
+            // $request->image->move(public_path('images'), $imageName);
     
-            $validatedData['image'] = $imageName;
+            // $validatedData['image'] = $imageName;
     
             $testimony = Testmony::where('id', $id)->update([
                 'name' => $validatedData['name'],
                 'testimony' => $validatedData['testimony'],
-                'image' => $validatedData['image'],
                 'user_id' => $validatedData['user_id'],
             ]
             );

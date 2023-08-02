@@ -73,13 +73,13 @@ function getSubCat(val) {
                         <div class="row">
 							<div class="col-xs-12">
 								<div class="page-title-box">
-                                    <h4 class="page-title">Add News </h4>
+                                    <h4 class="page-title">Request Testimony </h4>
                                     <ol class="breadcrumb p-0 m-0">
                                         <li>
                                             <a href="#">Dashboard</a>
                                         </li>
                                         <li>
-                                            <a href="#">Add News </a>
+                                         
                                         </li>
                                         <!-- <li class="active">
                                             Add Article
@@ -130,7 +130,7 @@ function getSubCat(val) {
                                             </div>
  <div class="form-group m-b-20">
 <label for="exampleInputEmail1">Name</label>
-<input type="text" class="form-control" value="{{auth()->user()->name}}" id="posttitle" name="name" placeholder="Enter title" required>
+<input type="text" class="form-control"  id="posttitle" name="name" placeholder="Enter title" required>
 <input type="hidden" class="form-control" value="{{auth()->user()->id}}" id="posttitle" name="user_id"  required>
 <div class="col-xs-12">
                                                 <p><b style="color: red">

@@ -49,33 +49,15 @@
 
     <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
-    <div class=" z-50 p-5 flex flex-col  gap-5 ">
-      <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
-
-      <p class="z-10">
-      Advocacy for persons with disabilities
-      </p>
-
-      <p>
-      Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
-      </p>
-   
-
-    </div>
-    
-    </div>
-
-    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
-
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
 
   <p class="z-10">
-  Advocacy for persons with disabilities
+  MEDIATION
   </p>
 
   <p>
-  Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
+  We Mediate  people in society using different methods  of ADR (Alternative dispute Resolution ) 
   </p>
 
 
@@ -86,33 +68,15 @@
 <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
-  <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
+<img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
 
-  <p class="z-10">
-  Advocacy for persons with disabilities
-  </p>
+<p class="z-10">
+Advocacy for persons with disabilities
+</p>
 
-  <p>
-  Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
-  </p>
-
-
-</div>
-
-</div>
-
-    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
-
-<div class=" z-50 p-5 flex flex-col  gap-5 ">
-  <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
-
-  <p class="z-10">
-  Orienting cases
-  </p>
-
-  <p>
-  Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
-  </p>
+<p>
+Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
+</p>
 
 
 </div>
@@ -122,15 +86,90 @@
 <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
-  <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
+<img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
 
-  <p class="z-10">
-  Counselling based on laws 
-  </p>
+<p class="z-10">
+ASSISTING  DEFILED  AND RAPED PERSONS
+</p>
 
-  <p>
-  Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
-  </p>
+<p>
+Human justice organization provides with the   assistance  for defiled children and raped persons  by suing and following their cases in the competent courts  
+</p>
+
+
+</div>
+
+</div>
+
+<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+
+<div class=" z-50 p-5 flex flex-col  gap-5 ">
+<img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
+
+<p class="z-10">
+COUNSELLING BASED ON LAWS 
+</p>
+
+<p>
+We  promote  the social well-being people through the counseling based on  law
+Where we prevent many hindrances to the society by providing  the real   counsels 
+</p>
+
+
+</div>
+
+</div>
+
+<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+
+
+<div class=" z-50 p-5 flex flex-col  gap-5 ">
+<img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
+
+<p class="z-10">
+ORIENTING  CASES
+</p>
+
+<p>
+We orient complainants  to sue  their cases in the competent authority  .
+
+</p>
+
+
+</div>
+
+</div>
+<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+
+
+<div class=" z-50 p-5 flex flex-col  gap-5 ">
+<img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
+
+<p class="z-10">
+TRAININGS BASED ON LAWS 
+</p>
+
+<p>
+We promote the social well-being of beneficiaries through trainings based on laws  where  we  acquaint relevant  and current laws to the people through trainings 
+</p>
+
+
+</div>
+
+</div>
+<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+
+
+<div class=" z-50 p-5 flex flex-col  gap-5 ">
+<img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
+
+<p class="z-10">
+ADVOCACY  FOR PERSONS WITH DISABILITIES 
+</p>
+
+<p>
+We Advocate persons with intellectual  disabilities and neuro –development in different sectors of life 
+</p>
 
 
 </div>

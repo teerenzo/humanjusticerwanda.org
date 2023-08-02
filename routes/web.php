@@ -38,6 +38,19 @@ Route::post('/register', [SignUpController::class, 'register']);
 // verify email
 Route::get('/verify-email/{token}', [SignUpController::class, 'verifyEmail'])->name('verifyEmail');
 
+// forgot password
+
+Route::get('/forgot-password', [SignUpController::class, 'forgotPasswordView'])->name('forgotPassword');
+Route::post('/forgot-password', [SignUpController::class, 'forgotPassword'])->name('forgotPassword');
+
+// reset password
+
+
+Route::get('/reset-password/{token}', [SignUpController::class, 'resetPasswordView'])->name('resetPassword');
+Route::post('/reset-password/{token}', [SignUpController::class, 'updatePassword'])->name('resetPassword');
+
+
+
 //dashboard route
 
 Route::get('/dashboard', function () {
