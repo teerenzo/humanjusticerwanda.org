@@ -16,9 +16,14 @@
      <div>
    <h2 class="text-2xl">Follow Us</h2>  
    <div class="flex gap-2 pt-2 ">
+      <a href="https://www.facebook.com/profile.php?id=100095471198595&mibextid=ZbWKwL" target="_blank">
       <img src="../images/Facebook.svg" alt="" width="30" height="30" srcset="">
+      </a>
       <img src="../images/Twitter.svg" alt="" width="30" height="30" srcset="">
+
+      <a href="https://instagram.com/hjo8178?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D" target="_blank">
       <img src="../images/Instagram.svg" alt="" width="30" height="30" srcset="">
+      </a>
     
    </div>
      </div>
