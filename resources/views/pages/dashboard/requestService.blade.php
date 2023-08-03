@@ -128,26 +128,37 @@ function getSubCat(val) {
     
 <label for="exampleInputEmail1">Service</label>
   <select name="service" id="" class="form-control">
-    <option value="">
-    Assisting defiled and raped persons
+  <option value="">
+Select Service
+    </option> 
+       <option value="">
+    MEDIATION
     </option>
 
     <option >
-    Orienting cases
-    </option>
-
-
-    <option >
-    Counselling based on laws
+    ADVOCACY FOR PERSONS WITH DISABILITIES
     </option>
 
 
     <option >
-    Advocacy for persons with disabilities
+    ASSISTING DEFILED AND RAPED PERSONS
+    </option>
+
+
+    <option >
+    COUNSELLING BASED ON LAWS
+    </option>
+
+    <option >
+    ORIENTING CASES
+    </option>
+
+    <option >
+    TRAININGS BASED ON LAWS
     </option>
 
     <option>
-    Mediating people in society using ADR (Alternative dispute Resolution)
+    ADVOCACY FOR PERSONS WITH DISABILITIES
     </option>
 
 
