@@ -38,12 +38,12 @@
 
   <section class="flex flex-col justify-center bg-[#E8E8E8] w-full py-10">
     <div class="flex flex-col justify-center items-center w-full">
-      <p class="text-xl p-2">
+      <p class="text-2xl p-2">
       What we offer.
       </p>
-      <p class="text-2xl">
+      <!-- <p class="text-2xl">
       The nicest laws service in the town, that go to you 24/7!
-      </p>
+      </p> -->
     </div>
     <div class="flex gap-10 justify-center flex-wrap p-5">
 
@@ -71,12 +71,12 @@
 <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
 
 <p class="z-10">
-Advocacy for persons with disabilities
-</p>
+  ADVOCACY  FOR PERSONS WITH DISABILITIES 
+  </p>
 
-<p>
-Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
-</p>
+  <p>
+  We Advocate persons with intellectual  disabilities and neuro –development in different sectors of life .
+  </p>
 
 
 </div>

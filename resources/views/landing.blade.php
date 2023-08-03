@@ -119,11 +119,11 @@
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
 
   <p class="z-10">
-  Advocacy for persons with disabilities
+  ADVOCACY  FOR PERSONS WITH DISABILITIES 
   </p>
 
   <p>
-  Estate planning notary service that assists individuals in preparing and notarizing various estate planning documents
+  We Advocate persons with intellectual  disabilities and neuro –development in different sectors of life .
   </p>
 
 
@@ -168,7 +168,7 @@
   >
     <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8">
       <h2 class="max-w-xl text-4xl font-bold tracking-tight sm:text-4xl">
-        Read testimony from our customers
+      Read testmony from our beneficiaries.
       </h2>
 
       <div class="mt-8 flex gap-4 lg:mt-0">
