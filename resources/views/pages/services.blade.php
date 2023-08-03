@@ -7,7 +7,7 @@
 
   <style>
     .bg-land{
-      background-image: url('../images/back.png');
+      background-image: url('../images/bg9.png');
       background-repeat: no-repeat;
       background-size: cover;
     }
