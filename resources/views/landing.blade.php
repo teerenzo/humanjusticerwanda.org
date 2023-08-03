@@ -72,7 +72,7 @@
     <div class="relative">
       <div class=" absolute bg-[#015AAB] flex flex-col justify-center w-1/4 mb-0 right-0 top-0 text-white align-center items-center py-5">
         <span class="text-2xl">
-          5+
+          2+
         </span>
         <span class="text-sm">
         years experience
@@ -89,9 +89,9 @@
       <p class="text-xl p-2">
       What we offer.
       </p>
-      <p class="text-2xl">
+      <!-- <p class="text-2xl">
       The nicest notaries in the town, that go to you 24/7!
-      </p>
+      </p> -->
     </div>
     <div class="flex gap-10 justify-center md:flex-wrap md:flex-row flex-col p-5">
 

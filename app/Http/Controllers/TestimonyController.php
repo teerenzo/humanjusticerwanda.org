@@ -31,7 +31,6 @@ class TestimonyController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|max:255',
              'testimony' => 'required:max:200',
-             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
              'user_id' => 'required',
     
         ]);
@@ -43,15 +42,10 @@ class TestimonyController extends Controller
             return redirect()->back()->with('status', 'You have already submitted a testimony');
         }
 
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('images'), $imageName);
-
-        $validatedData['image'] = $imageName;
-
         $testimony = Testmony::create([
             'name' => $validatedData['name'],
             'testimony' => $validatedData['testimony'],
-            'image' => $validatedData['image'],
+            'image' => 'image',
             'user_id' => $validatedData['user_id'],
         ]
         );
@@ -77,9 +71,6 @@ class TestimonyController extends Controller
             $validatedData = $request->validate([
                 'name' => 'required|max:255',
                  'testimony' => 'required:max:200',
-                 'user_id' => 'required',
-                 
-        
             ]);
     
             // $imageName = time().'.'.$request->image->extension();
@@ -90,7 +81,6 @@ class TestimonyController extends Controller
             $testimony = Testmony::where('id', $id)->update([
                 'name' => $validatedData['name'],
                 'testimony' => $validatedData['testimony'],
-                'user_id' => $validatedData['user_id'],
             ]
             );
     

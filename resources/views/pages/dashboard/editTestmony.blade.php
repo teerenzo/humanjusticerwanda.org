@@ -159,16 +159,16 @@ $id = substr($url, strrpos($url, '/') + 1);
 
 <div class="row">
 <div class="col-sm-12">
-<img src="{{ url('images/'.$testimony->image) }}"
+<!-- <img src="{{ url('images/'.$testimony->image) }}"
       style="height: 100px; width: 150px;">
       <a class="btn btn-primary">
         Change Image
-</a>
+</a> -->
  <div class="card-box  hidden ">
-
+<!-- 
 <h4 class="m-b-30 m-t-0 header-title"><b>Image</b></h4>
 <input type="file" class="form-control" id="postimage" name="image"  required>
-</div>
+</div> -->
 <div class="col-xs-12">
                                                 <p><b style="color: red">
                                                 @error('image')

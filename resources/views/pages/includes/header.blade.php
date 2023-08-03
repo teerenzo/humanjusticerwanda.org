@@ -2,7 +2,10 @@
    <div class="flex justify-between">
     <img src="../images/outgoing.svg" alt="" srcset="">
     <span>
-    Call Us at : (250) 786373726
+      <a href="tel:+250786373726">
+      Call Us at : (250) 786373726
+      </a>
+   
     </span>
    </div>
 

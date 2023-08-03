@@ -37,5 +37,13 @@ class ContactController extends Controller
         return view('pages.dashboard.comments', compact('contacts'));
     }
 
+    public function deleteContact($id)
+    {
+        $contact = contact::find($id);
+        $contact->delete();
+
+        return redirect()->back()->with('success', 'Message deleted successfully.');
+    }
+
 
 }

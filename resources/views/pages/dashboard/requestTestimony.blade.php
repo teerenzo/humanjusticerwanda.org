@@ -163,7 +163,7 @@ function getSubCat(val) {
 </div>
 
 
-<div class="row">
+<!-- <div class="row">
 <div class="col-sm-12">
  <div class="card-box">
 <h4 class="m-b-30 m-t-0 header-title"><b>Image</b></h4>
@@ -177,7 +177,7 @@ function getSubCat(val) {
                                                 </b></p>
                                             </div>
 </div>
-</div>
+</div> -->
 
 
 <button type="submit" name="submit" class="btn btn-success waves-effect waves-light">Save and Post</button>

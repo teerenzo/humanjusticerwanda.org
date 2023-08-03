@@ -118,6 +118,8 @@ Route::post('/contact', [ContactController::class,'storeContact'])->name('contac
 
 Route::get('/comments', [ContactController::class,'manageContact'])->name('manageContact');
 
+Route::get('/comments/delete/{id}', [ContactController::class,'deleteContact'])->name('deleteContact');
+
 
 
 

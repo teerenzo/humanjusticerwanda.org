@@ -109,7 +109,7 @@
 <th>message</th>
 
 
-<!-- <th>Action</th> -->
+<th>Action</th>
 
 </tr>
 </thead>
@@ -131,13 +131,10 @@
     <td>
             
   
-    <!-- @if(auth()->user()->role == 'admin')
+    @if(auth()->user()->role == 'admin')
+        <a href="{{route('deleteContact',$data->id)}}" onclick="return confirm('Do you reaaly want to delete this?')"> <i class="fa fa-trash" style="color: #f05050"></i></a>
 
-    <a href="mailto:{{$data->email}}">
-        &nbsp;<i class="fa fa-reply" style="color: blue"></i></a> 
-
-        &nbsp;<a href="{{route('rejectService',$data->id)}}" onclick="return confirm('Do you reaaly want to reject this case?')"> <i class="fa fa-times" style="color: #f05050"></i></a> 
-        @endif -->
+        @endif
         </div>
     
     </td>

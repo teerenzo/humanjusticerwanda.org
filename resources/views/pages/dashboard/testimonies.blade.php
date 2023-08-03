@@ -104,8 +104,10 @@
 <thead>
 <tr>
                                            
-<th>Image</th>
+<!-- <th>Image</th> -->
 <th>Title</th>
+
+<th>Name</th>
 
 <th>Action</th>
 </tr>
@@ -116,18 +118,21 @@
 
  @foreach($testimonies as $data)
  <tr>
-    <td>
+    <!-- <td>
         <img src="{{ url('images/'.$data->image) }}"
       style="height: 100px; width: 150px;">
-      </td> 
+      </td>  -->
     <td>
     <?php
         echo  (substr($data->testimony,0));
         ?>    
 
      
-
+</td>
     
+    <td>
+    {{$data->name}}
+    </td>
     <td>
         @if(auth()->user()->role=='admin')
     
