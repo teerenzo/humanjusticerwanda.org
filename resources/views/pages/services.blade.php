@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human justices organisation | service</title>
   @vite('resources/css/app.css')
 
   <style>
@@ -13,6 +14,21 @@
     }
     .bg-service1{
       background-image: url('../images/bg10.png');
+    }
+    .bg-advocate{
+      background-image: url('../images/advocate.png');
+    }
+    .bg-rape{
+      background-image: url('../images/rape.png');
+    }
+    .bg-meditation{
+      background-image: url('../images/meditation.png');
+    }
+    .bg-law{
+      background-image: url('../images/law.png');
+    }
+    .bg-law2{
+      background-image: url('../images/law2.png');
     }
   </style>
 </head>
@@ -47,7 +63,7 @@
     </div>
     <div class="flex gap-10 justify-center flex-wrap p-5">
 
-    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+    <div class=" bg-meditation w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -65,7 +81,7 @@
 
 </div>
 
-<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+<div class=" bg-advocate w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
 <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -83,7 +99,7 @@
 
 </div>
 
-<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+<div class=" bg-rape w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
 <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -101,7 +117,7 @@ Human justice organization provides with the   assistance  for defiled children 
 
 </div>
 
-<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+<div class=" bg-law w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
 <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -139,7 +155,7 @@ We orient complainants  to sue  their cases in the competent authority  .
 </div>
 
 </div>
-<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+<div class=" bg-law2 w-full md:w-1/4 text-white flex-wrap" style="">
 
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
@@ -160,7 +176,7 @@ We promote the social well-being of beneficiaries through trainings based on law
 <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
 
 
-<div class=" z-50 p-5 flex flex-col  gap-5 ">
+<!-- <div class=" z-50 p-5 flex flex-col  gap-5 ">
 <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
 
 <p class="z-10">
@@ -174,7 +190,7 @@ We Advocate persons with intellectual  disabilities and neuro –development in 
 
 </div>
 
-</div>
+</div> -->
     </div>
   </section>
 

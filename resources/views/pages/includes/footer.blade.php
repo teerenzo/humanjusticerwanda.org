@@ -2,6 +2,7 @@
     
     <div class="flex flex-col md:flex-row gap-5 p-5 px-10 justify-between text-white">
      <div>
+      <img src="../images/band.jpeg" alt="" srcset="">
   <!-- <p>   Sign up our newsletter to get update information, news and free insight.
   </p> -->
 

@@ -14,14 +14,14 @@
       height: 80vh;
 
     }
-    .bg-service1{
-      background-image: url('../images/bg10.png');
+    .bg-advocate{
+      background-image: url('../images/advocate.png');
     }
-    .bg-service2{
-      background-image: url('../images/service1.png');
+    .bg-rape{
+      background-image: url('../images/rape.png');
     }
-    .bg-service3{
-      background-image: url('../images/service1.png');
+    .bg-meditation{
+      background-image: url('../images/meditation.png');
     }
   </style>
 </head>
@@ -96,7 +96,7 @@
     </div>
     <div class="flex gap-10 justify-center md:flex-wrap md:flex-row flex-col p-5">
 
-    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+    <div class=" bg-meditation w-full md:w-1/4 text-white flex-wrap" style="">
 
     <div class=" z-50 p-5 flex flex-col  gap-5 ">
       <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -114,7 +114,7 @@
     
     </div>
 
-    <div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+    <div class=" bg-advocate w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
@@ -132,7 +132,7 @@
 
 </div>
 
-<div class=" bg-service1 w-full md:w-1/4 text-white flex-wrap" style="">
+<div class=" bg-rape w-full md:w-1/4 text-white flex-wrap" style="">
 
 <div class=" z-50 p-5 flex flex-col  gap-5 ">
   <img src="../images/raw.png" alt="" srcset="" height="50" width="50" >
